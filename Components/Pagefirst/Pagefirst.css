@@ -1,0 +1,184 @@
+.page1-box {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+}
+
+.page1-blue-box, .page1-white-box {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page1-blue-box {
+    background-color: #0342B2;
+    position: relative; 
+}
+
+.page1-white-box {
+    background-color: white;
+    background-image: url(../zimages/galoimgwhiteblur60.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Blue box styles */
+.page1-logo {
+    width: 70px;
+    height: 70px;
+    background-image: url(../zimages/seamslogo2.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 6%;
+}
+
+.page1-seamsh2 {
+    font-size: 70px;
+    color: white;
+    font-weight: bolder;
+    text-align: center;
+    margin: 12px 0;
+}
+
+.page1-welcomeh4 {
+    color: #8EAADC;
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+}
+
+.page1-lionlogo {
+    width: 250px;
+    height: 250px;
+    background-image: url(../zimages/lioncut.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute; 
+    bottom: 0; 
+    left: 0; 
+}
+
+/* White box styles */
+.page1-lccblogo {
+    width: 90px;
+    height: 90px;
+    background-image: url(../zimages/lccblogoorg.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 5%;
+}
+
+.page1-loginh2 {
+    font-size: 38px;
+    color: #0342B2;
+    margin-top: 3%;
+}
+
+.page1-loginh4 {
+    color: darkslategray;
+    font-size: 15px;
+    margin-top: 3%;
+}
+
+.page1-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: transparent;
+    width: 100%;
+    margin-top: 10%;
+    gap: 15px;
+}
+
+.page1-button-1,
+.page1-button-2,
+.page1-button-3 {
+    padding: 10px 20px;
+    width: 50%;
+    height: 45px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #0342B2;
+    color: white;
+}
+
+.page1-button-1:hover,
+.page1-button-2:hover,
+.page1-button-3:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .page1-box {
+        flex-direction: column;
+    }
+
+    .page1-blue-box,
+    .page1-white-box {
+        width: 100%;
+        height: 50vh;
+    }
+
+    .page1-seamsh2 {
+        font-size: 50px;
+    }
+
+    .page1-welcomeh4 {
+        font-size: 16px;
+    }
+
+    .page1-lionlogo {
+        width: 180px;
+        height: 180px;
+    }
+
+    .page1-button-1,
+    .page1-button-2,
+    .page1-button-3 {
+        width: 80%;
+    }
+
+    .page1-loginh2 {
+        font-size: 32px;
+    }
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.page1-button-container {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Hover effect for buttons */
+.page1-button-1:active,
+.page1-button-2:active,
+.page1-button-3:active {
+    transform: scale(0.98);
+}
